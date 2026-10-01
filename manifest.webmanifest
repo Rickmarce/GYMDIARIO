@@ -1,0 +1,17 @@
+{
+  "name": "Diario de gimnasio",
+  "short_name": "Gym",
+  "description": "Diario de entrenamientos con biblioteca de ejercicios, rutinas, series, repeticiones y peso.",
+  "lang": "es",
+  "start_url": "./#/entrenar",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#16181d",
+  "theme_color": "#16181d",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

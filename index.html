@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diario de gimnasio</title>
+<meta name="description" content="Diario de entrenamientos con biblioteca de ejercicios, rutinas, series, repeticiones y peso.">
+<meta name="theme-color" content="#16181d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="view" aria-live="polite"></main>
+
+<nav id="tabs" aria-label="Secciones">
+  <a href="#/entrenar" data-tab="entrenar"><span aria-hidden="true">🏋️</span>Entrenar</a>
+  <a href="#/rutinas" data-tab="rutinas"><span aria-hidden="true">📋</span>Rutinas</a>
+  <a href="#/ejercicios" data-tab="ejercicios"><span aria-hidden="true">📚</span>Ejercicios</a>
+  <a href="#/historial" data-tab="historial"><span aria-hidden="true">📅</span>Historial</a>
+</nav>
+
+<div id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
