@@ -1,5 +1,5 @@
 // Cambia VERSION en cada publicación para que los móviles descarguen la versión nueva.
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL = `shell-${VERSION}`;
 const IMAGES = 'imagenes-v1';
 const FILES = [
@@ -12,9 +12,11 @@ self.addEventListener('install', e => {
 });
 
 self.addEventListener('activate', e => {
+  // Solo borra cachés antiguas de esta app: el origen rickmarce.github.io lo comparten otras apps (p. ej. partes-lav)
+  const propia = k => k.startsWith('shell-') || k.startsWith('imagenes-');
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== SHELL && k !== IMAGES).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => propia(k) && k !== SHELL && k !== IMAGES).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
